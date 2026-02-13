@@ -1,0 +1,1 @@
+A web-based multimedia system built with HTML, CSS, and JavaScript (p5.js) that allows users to view images, play videos, and listen to audio files with an animated audio visualizer. This project demonstrates interactive file handling, dynamic media rendering, and responsive UI design.
