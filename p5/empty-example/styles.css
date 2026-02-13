@@ -1,0 +1,137 @@
+:root {
+    --shadow-slate: #2C343D;
+    --marigold-orange: #E0A32B;
+    --zinc-white: #F2F3F4;
+    --taupe-gray: #8B8589;
+    --midnight-black: #000000;
+
+    --bg-main: var(--shadow-slate);
+    --bg-dark: var(--midnight-black);
+    --text-primary: var(--zinc-white);
+    --text-secondary: var(--taupe-gray);
+    --accent: var(--marigold-orange);
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: var(--bg-dark);
+    color: var(--text-primary);
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    margin: 10px;
+    font-size: 18px;
+    text-align: center;
+    color: var(--accent);
+}
+
+.container {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+}
+
+.left-panel {
+    width: 30%;
+    padding: 10px;
+    overflow-y: auto;
+    max-height: calc(100vh - 120px);
+    border-right: 2px solid var(--shadow-slate);
+    margin-left: 10px;
+    background: var(--bg-main);
+}
+
+.right-panel {
+    max-height: calc(100vh - 90px);
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-dark);
+}
+
+.gallery {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.gallery-item {
+    cursor: pointer;
+    border: 1px solid var(--taupe-gray);
+    padding: 5px;
+    background: var(--shadow-slate);
+    text-align: left;
+    font-size: 11px;
+    color: var(--text-secondary);
+}
+
+.gallery-item:hover {
+    background: var(--accent);
+    color: var(--midnight-black);
+}
+
+.controls {
+    margin-top: 5px;
+}
+
+button {
+    margin: 5px;
+    padding: 8px 12px;
+    border: none;
+    background: var(--accent);
+    color: var(--midnight-black);
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 4px;
+}
+
+button:hover {
+    background: var(--zinc-white);
+    color: var(--shadow-slate);
+}
+
+@media (max-width: 600px) {
+    .container {
+        flex: 1;
+        display: flex;
+        flex-direction: row;
+        overflow: hidden;
+        margin-left: 15px;
+        height: auto;
+    }
+
+    .left-panel {
+        flex: 1;
+        padding: 10px;
+        overflow-y: auto;
+        border-right: 2px solid var(--shadow-slate);
+        background: var(--bg-main);
+        min-width: 200px;
+    }
+
+    .right-panel {
+        flex: 2;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background: var(--bg-dark);
+    }
+
+    #canvas-container {
+        width: 100%;
+        max-width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
